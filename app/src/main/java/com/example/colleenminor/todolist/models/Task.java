@@ -16,6 +16,9 @@ public class Task extends Model {
     @Column( name = "description")
     private String mDescription;
 
+    @Column( name = "category" )
+    private Category mCategory;
+
     public Task() {
         //Tells java to look in the model
         // class and use the code that's
@@ -24,9 +27,10 @@ public class Task extends Model {
         super();
     }
 
-    public Task(String description) {
+    public Task(String description, Category category) {
         super();
         mDescription = description;
+        mCategory = category;
     }
 
     //Ctrl + enter to automatically generate
